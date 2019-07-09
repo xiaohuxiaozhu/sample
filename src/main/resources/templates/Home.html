@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<title>My Food</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+    .w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+       class="w3-bar-item w3-button">Close Menu</a>
+    <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+     <!--   <div class="w3-right w3-padding-16">Mail</div> -->
+        <div class="w3-center w3-padding-16">My Food</div>
+    </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562693780/620x620xBook-Art-Of-Blending.jpg.pagespeed.ic.2DD8ziE_Dv_qybmto.jpg"
+                 alt="Blending" style="width:100%">
+            <h3>Blending  </h3>
+            <p><a class="nav-link" href="Blending.html">Making creamy smoothies, creating milk substitutes,mixing drinks or blending butters and batters.</a></p>
+        </div>
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562695522/ChopDrophnmy1_orptek.png" alt="dry chopping" style="width:100%">
+            <h3>Dry Chopping</h3>
+            <p> Dry chopping is used for such things as carrots,onions,eggs, and cheese.</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562695746/downtownmill_1_n8xz2z.jpg" alt="frozen treats" style="width:100%">
+            <h3>Frozen treats</h3>
+            <p>The most amazing dessert you'll make. </p>
+            <p></p>
+        </div>
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562696393/54ff79afdd7bd-corn-soup-de_kogjjt.jpg" alt="Heating" style="width:100%">
+            <h3>Soup</h3>
+            <p>Nothing beats the cold weather like a warming soup or stew. </p>
+        </div>
+    </div>
+
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562696872/001143cb-800_fsarrh.jpg" alt="Emulsify" style="width:100%">
+            <h3>Emulsify</h3>
+            <p>Mayonnaise, aioli, and salad dressings</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562697093/R035315_od3h5d.jpg" alt="Puree" style="width:100%">
+            <h3>Puree</h3>
+            <p>You can easily process fruits, vegetables and other ingredients for dips, spreads, syrups.</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,c_fill,g_auto,w_760/https://storage.googleapis.com/gen-atmedia/3/2010/02/a45b1e38c953ffa12cfd13ebf4ab3b6b6f821bef.jpeg" alt="Bread" style="width:100%">
+            <h3>Bread</h3>
+            <p>Everybody loves bread and I'm no exception. Get recipes for savory and dessert breads and learn how to make them with fantastic step-by-step instructions.</p>
+        </div>
+        <div class="w3-quarter">
+            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562697655/Skillet-Steak-and-Asparagus-1_smmco3.jpg" alt="Steak" style="width:100%">
+            <h3>Steak</h3>
+            <p>Cook the perfect steak.</p>
+        </div>
+    </div>
+
+    <!-- Pagination
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+    </div>
+-->
+    <hr id="about">
+
+    <!-- About Section -->
+    <div class="w3-container w3-padding-32 w3-center">
+        <h3>About Me, The Food Woman</h3><br>
+        <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562698478/cute-little-baker-vector-girl-baking-65797998_ylbk1i.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="300" height="300">
+        <div class="w3-padding-32">
+            <h4><b>I am Who I Am!</b></h4>
+            <h6><i>With Passion For Real, Good Food</i></h6>
+            <p>I enjoy how food makes people happy. I like watching their faces as they eat what I’ve made.</p>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Footer
+    <footer class="w3-row-padding w3-padding-32">
+        <div class="w3-third">
+            <h3>FOOTER</h3>
+            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+
+        <div class="w3-third">
+            <h3>BLOG POSTS</h3>
+            <ul class="w3-ul w3-hoverable">
+                <li class="w3-padding-16">
+                    <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">Lorem</span><br>
+                    <span>Sed mattis nunc</span>
+                </li>
+                <li class="w3-padding-16">
+                    <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">Ipsum</span><br>
+                    <span>Praes tinci sed</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w3-third w3-serif">
+            <h3>POPULAR TAGS</h3>
+            <p>
+                <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+            </p>
+        </div>
+    </footer>
+
+-->
+
+    <!-- End page content -->
+</div>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
