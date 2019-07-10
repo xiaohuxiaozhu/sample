@@ -1,160 +1,248 @@
 <!DOCTYPE html>
-<html>
-<title>Blending</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-    .w3-bar-block .w3-bar-item {padding:20px}
-</style>
+<html lang="en">
+<head>
+    <title>My Recipe Book</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+    </style>
+</head>
 <body>
+<div class="container-fluid">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <!-- Navbar content -->
 
-<!-- Sidebar (hidden by default)
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()"
-       class="w3-bar-item w3-button">Close Menu</a>
-    <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-</nav>
--->
-<!-- Top menu -->
-<div class="w3-top">
-    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-      <!--  <div class="w3-right w3-padding-16">Mail</div> -->
-        <div class="w3-center w3-padding-16">Blending</div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- <a class="navbar-brand" href="#">Navbar</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+    </nav>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://res.cloudinary.com/duqszimh4/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18/v1562696872/001143cb-800_fsarrh.jpg"
+                     alt="Smoothis" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="https://res.cloudinary.com/duqszimh4/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18/v1562695746/downtownmill_1_n8xz2z.jpg"
+                     alt="Chicago" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="https://res.cloudinary.com/duqszimh4/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18/v1562702971/no-banana-smoothies_buwjr6.jpg"
+                     alt="New York" width="1100" height="500">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
-</div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-    <!-- First Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-        <div class="w3-quarter">
-            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562701310/IGT-Triple-Berry-Smoothie-5-Ingredient-Paleo-Vegan-Gluten-Free-Dairy-Free-1.5_lfjuk9.jpg" alt="Triple Berry Smoothie" style="width:100%">
-           <!-- <h3>Triple Berry Smoothie</h3>-->
-            <p><a class="nav-link" href="TripleBerrySmoothie.html">Triple Berry Smoothie</a></p>
-        </div>
-        <div class="w3-quarter">
-            <img src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562703642/refreshing-watermelon-juice-with-grapes-picture_hxiwxn.jpg" alt="FrozenStrawberryGrapeJuice" style="width:100%">
-         <!--   <h3>Frozen Strawberry Grape Juice</h3>-->
-            <p><a class="nav-link" href="FrozenStrawberryGrapeJuice.html">Frozen Strawberry Grape Juice</a></p>
-        </div>
-        <div class="w3-quarter">
-            <img src="https://tipbuzz.com/wp-content/uploads/Funfetti-Cake-Mix-Milkshake-.jpg" alt="MilkShake" style="width:100%">
-         <!--   <h3>Basic Milkshake</h3>-->
-            <p><a class="nav-link" href=" ">Basic Milkshake and Suggested Flavor Add-Ins</p>
-         <!--   <p>What else?</p>-->
-        </div>
-       <!-- <div class="w3-quarter">
-            <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div> -->
-    </div>
-
-    <!-- Second Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center">
-        <div class="w3-quarter">
-            <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
-            <h3>All I Need Is a Popsicle</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-        <div class="w3-quarter">
-            <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
-            <h3>Salmon For Your Skin</h3>
-            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-        <div class="w3-quarter">
-            <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-            <h3>The Perfect Sandwich, A Real Classic</h3>
-            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-        <div class="w3-quarter">
-            <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
-            <h3>Le French</h3>
-            <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-    </div>
-
-    <!-- Pagination
-    <div class="w3-center w3-padding-32">
-        <div class="w3-bar">
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-        </div>
-    </div>
--->
-    <hr id="about">
-
-    <!-- About Section
-    <div class="w3-container w3-padding-32 w3-center">
-        <h3>About Me, The Food Man</h3><br>
-        <img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-        <div class="w3-padding-32">
-            <h4><b>I am Who I Am!</b></h4>
-            <h6><i>With Passion For Real, Good Food</i></h6>
-            <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        </div>
-    </div>
+    <!--Cards-->
+    <br>
     <hr>
--->
-    <!-- Footer
-    <footer class="w3-row-padding w3-padding-32">
-        <div class="w3-third">
-            <h3>FOOTER</h3>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <hr>
+    <!--  <h2> first one item</h2>-->
+    <!--  <p>Image at the top (card-img-top):</p>-->
+    <!--<div class="row">-->
+
+    <div class="card-columns " align="center">
+
+
+        <div class="card" style="width:400px" >
+                <img class="card-img-top"
+                     src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562701310/IGT-Triple-Berry-Smoothie-5-Ingredient-Paleo-Vegan-Gluten-Free-Dairy-Free-1.5_lfjuk9.jpg"
+                     alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Triple Berry Smoothie</h4>
+                    <p class="card-text">Preparation:10 minutes * processing:1 minute * yield 1 1/2 cups (360ml)</p>
+                    <a href="TripleBerrySmoothie.html" class="btn btn-primary">Click</a>
+                </div>
+            </div>
+
+
+
+        <br>
+        <hr>
+        <!--  <h2> Second one item</h2>-->
+
+        <div class="card" style="width:400px" >
+                <img class="card-img-top"
+                     src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562703642/refreshing-watermelon-juice-with-grapes-picture_hxiwxn.jpg "
+                     alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Frozen Strawberry Grape Juice</h4>
+                    <p class="card-text">Preparation:10 minutes *processing:40-45 seconds *yield:2 2/2 cups (600
+                        ml)</p>
+                    <a href="FrozenStrawberryGrapeJuice.html" class="btn btn-primary">Click</a>
+                </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 2 on sm-->
+        </div>
+        <!--  <h2> Third one item</h2>-->
+
+        <div class="card" style="width:400px" >
+                <img class="card-img-top"
+                     src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562771065/milkshake_dhngld.jpg"
+                     alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">MilkShake</h4>
+                    <p class="card-text">Preparation:10 minutes * processing:15-20 second * yield 2 cups (480ml)</p>
+                    <a href="MilkShake.html" class="btn btn-primary">Click</a>
+                </div>
+            </div>
+
+        <br>
+        <hr>
+        <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 3 on md-->
+        </div>
+        <!--  <h2> forth one item</h2>-->
+
+        <div class="card" style="width:400px" >
+                <img class="card-img-top"
+                     src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562774016/6106377674_3f8b12e4f1_b_fmascc.jpg "
+                     alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Frozen Whisky Sour</h4>
+                    <p class="card-text">Preparation:10 minutes * processing:30 second * yield 3 1/4 cups
+                        (780ml)</p>
+                    <a href="FrozenWhiskySour.html" class="btn btn-primary">Click</a>
+                </div>
+        </div>
+        <br>
+        <hr>
+        <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 2 on sm-->
         </div>
 
-        <div class="w3-third">
-            <h3>BLOG POSTS</h3>
-            <ul class="w3-ul w3-hoverable">
-                <li class="w3-padding-16">
-                    <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-                    <span class="w3-large">Lorem</span><br>
-                    <span>Sed mattis nunc</span>
-                </li>
-                <li class="w3-padding-16">
-                    <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-                    <span class="w3-large">Ipsum</span><br>
-                    <span>Praes tinci sed</span>
-                </li>
-            </ul>
+        <!--  <h2> Firth one item</h2>-->
+
+        <div class="card" style="width:400px" >
+                <img class="card-img-top"
+                     src=" https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562779428/strawberry-daiquiri-3-683x1024_rpuo0y.jpg"
+                     alt="Strawberry Daiquiri" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Strawberry Diquiri</h4>
+                    <p class="card-text">Preparation:10 minutes * processing:30 second * yield 3 1/4 cups
+                        (780ml)</p>
+                    <a href="FrozenWhiskySour.html" class="btn btn-primary">Click</a>
+                </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 2 on sm-->
+        </div>
+        <!--  <h2> Sixth one item</h2>-->
+
+        <div class="card" style="width:400px" >
+                <img class="card-img-top"
+                     src="https://res.cloudinary.com/duqszimh4/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1562779720/Kiwi-Margarita-9723-Copy-1_myn93n.jpg "
+                     alt="Whole fruit margarita" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Whole Fruit Margarita</h4>
+                    <p class="card-text">Preparation:10 minutes * processing:30 second * yield 3 1/4 cups
+                        (780ml)</p>
+                    <a href="WholeFruitMargarita.html" class="btn btn-primary">Click</a>
+                </div>
+
+        </div>
+        <br>
+        <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 2 on sm-->
         </div>
 
-        <div class="w3-third w3-serif">
-            <h3>POPULAR TAGS</h3>
-            <p>
-                <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
-                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
-                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
-                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
-                <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
-            </p>
-        </div>
-    </footer>
--->
-    <!-- End page content -->
+
+    </div>
+    </div>
+    <br>
+</br>
+
+<div class="card text-center">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Contact Us</h5>
+        <p class="card-text"> If you have any questions, please feel free to contact us! </p>
+        <a href="ContactUs.html" class="btn btn-primary">Click</a>
+    </div>
+    <div class="card-footer text-muted">
+        Thank you for visiting!
+    </div>
+</div>
 </div>
 
-<script>
-    // Script to open and close sidebar
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-    }
 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-    }
-</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
